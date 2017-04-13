@@ -15,6 +15,11 @@ const todo = (state, action) => {
         ...state,
         completed: !state.completed
       };
+    case "REMOVE_TODO":
+      if (state.id !== action.id) {
+        return state;
+      }
+      return;
     default:
       return state;
   }
@@ -26,6 +31,8 @@ const todos = (state = [], action) => {
       return [...state, todo(undefined, action)];
     case "TOGGLE_TODO":
       return state.map(t => todo(t, action));
+    case "REMOVE_TODO":
+      return state.filter(t => todo(t, action));
     default:
       return state;
   }
