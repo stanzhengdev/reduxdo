@@ -7,9 +7,11 @@ const App = () => (
   <div className="todoapp">
     <header>
       <h1>Todos</h1>
+      <AddTodo />
     </header>
-    <VisibleTodoList />
-    <AddTodo />
+    <section className="main">
+      <VisibleTodoList className="main" />
+    </section>
     <Footer />
   </div>
 );

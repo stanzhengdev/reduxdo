@@ -6,7 +6,7 @@ let AddTodo = ({ dispatch }) => {
   let input;
 
   return (
-    <div className="new-todo">
+    <div>
       <form
         onSubmit={e => {
           e.preventDefault();
@@ -18,6 +18,7 @@ let AddTodo = ({ dispatch }) => {
         }}
       >
         <input
+          className="new-todo"
           ref={node => {
             input = node;
           }}

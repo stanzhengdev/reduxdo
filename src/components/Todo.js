@@ -2,12 +2,14 @@ import React, { PropTypes } from "react";
 
 const Todo = ({ onClick, completed, text }) => (
   <li
-    onClick={onClick}
     style={{
       textDecoration: completed ? "line-through" : "none"
     }}
   >
-    {text}
+    <div className="view">
+      <label htmlFor="todo" onClick={onClick}>{text}</label>
+      <button className="destroy" />
+    </div>
   </li>
 );
 
