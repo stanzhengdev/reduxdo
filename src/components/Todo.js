@@ -1,6 +1,7 @@
-import React, { PropTypes } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { removeTodo } from "../actions";
+import PropTypes from "prop-types";
 
 const Todo = ({ onClick, onTodoRemoveClick, completed, text }) => (
   <li
