@@ -10,7 +10,8 @@ const Todo = ({ onClick, onTodoRemoveClick, completed, text }) => (
     }}
   >
     <div className="view">
-      <label htmlFor="todo" onClick={onClick}>{text}</label>
+      <input className="toggle" type="checkbox" onClick={onClick} />
+      <label htmlFor="todo">{text}</label>
       <button className="destroy" onClick={onTodoRemoveClick} />
     </div>
   </li>
