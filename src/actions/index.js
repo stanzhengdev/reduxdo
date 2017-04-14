@@ -1,4 +1,6 @@
-let nextTodoId = 0;
+import { v4 } from "uuid";
+
+let nextTodoId = v4();
 export const addTodo = text => ({
   type: "ADD_TODO",
   id: nextTodoId++,
